@@ -1,0 +1,59 @@
+/*
+Daniel Graham
+Assignment: Module 2.2 – Building a Web Page Exercise, Part 2
+Date: 08/17/2025
+*/
+
+/* Global settings */
+html, body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Paragraphs */
+p {
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+/* Headings */
+h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 500;
+    text-align: left;
+    padding-top: 15px;
+}
+
+/* Address */
+address {
+    text-align: center;
+}
+
+address a {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #4F3674;
+    text-decoration: none;
+}
+
+address a:hover {
+    text-decoration: underline;
+    background-color: #D6A800;
+}
+
+address a:visited {
+    color: #6B7280;
+}
+
+.intro {
+    text-indent: 2em;
+}
+
+.sentence {
+    font-style: italic;
+}
