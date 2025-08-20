@@ -13,9 +13,8 @@ html, body {
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1E293B; /* dark slate background */
-    color: #E2E8F0;           /* pale gray text */
-}
+    background-color: #1E293B;
+    color: #E2E8F0;         
 
 /* Container */
 #container {
@@ -26,24 +25,24 @@ html, body {
 
 /* Headings */
 h1, h2, h3, h4, h5 {
-    background-color: #334155;   /* muted slate */
-    color: #F1F5F9;              /* off-white text */
-    border: 1px solid #94A3B8;   /* pale gray-blue border */
+    background-color: #334155;  
+    color: #F1F5F9;              
+    border: 1px solid #94A3B8;   
     padding: 10px;
     border-radius: 6px;
 }
 
 /* Anchor links */
 a {
-    color: #38BDF8;      /* soft cyan-blue */
+    color: #38BDF8;      
     text-decoration: none;
     font-weight: 500;
 }
 
 a:hover {
-    color: #14B8A6;      /* muted teal on hover */
+    color: #14B8A6;      
 }
 
 a:visited {
-    color: #94A3B8;      /* pale gray-blue for visited */
+    color: #94A3B8;     
 }
