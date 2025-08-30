@@ -1,0 +1,53 @@
+/*      
+Daniel Graham
+ Module 4.2 – Build a Web Page Exercise, Part 4
+Date: 08/30/2025
+*/
+
+/* General page style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container formatting */
+#container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Center main heading */
+h1 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 30px;
+}
+
+/* Image gallery using CSS Grid */
+#image-gallery {
+    display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+/* Each book card on Grid */
+.book {
+    text-align: center;
+	border: 2px solid #333;
+	border-radius: 8px;
+}
+
+/* Book Images */
+.book img {
+    width: 100%;
+    max-width: 250px;
+    border: 2px solid #000;
+    border-radius: 8px;
+}
+
+/* Author Captions */
+figcaption {
+    font-style: italic;
+    margin-top: 5px;
+}
