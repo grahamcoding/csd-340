@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+Daniel Graham
+Module 9.3 – JavaScript - Part 1
+09/19/2025
+-->
+
+<title>CSD 340 Web Development with HTML and CSS</title>
+
+<script>
+    // JavaScript variables holding strings
+    let word1 = "together";
+    let word2 = "love";
+    let word3 = "alone";
+    let word4 = "hearts";
+	let word5 = "Khalil Gibran"
+
+    // Functions to replace underscores with words
+    function fillWord1() {
+        document.getElementById("span1").innerHTML = word1;
+    }
+    function fillWord2() {
+        document.getElementById("span2").innerHTML = word2;
+    }
+    function fillWord3() {
+        document.getElementById("span3").innerHTML = word3;
+    }
+    function fillWord4() {
+        document.getElementById("span4").innerHTML = word4;
+    }
+	function fillWord5() {
+        document.getElementById("span5").innerHTML = word5;
+    }
+</script>
+</head>
+
+<body>
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+        <p>
+            Then Almitra spoke again and said, And what of Marriage, master?  
+            And he answered saying:  
+            You were born <span id="span1">______</span>, and together you shall be forevermore.  
+            You shall be together when the white wings of death scatter your days.  
+            Ay, you shall be together even in the silent memory of God.  
+            But let there be spaces in your togetherness,  
+            And let the winds of the heavens dance between you.  
+        </p>
+
+        <p>
+            Love one another, but make not a bond of <span id="span2">______</span>:  
+            Let it rather be a moving sea between the shores of your souls.  
+            Fill each other’s cup but drink not from one cup.  
+            Give one another of your bread but eat not from the same loaf.  
+            Sing and dance together and be joyous, but let each one of your be <span id="span3">______</span>,  
+            Even as the strings of the lute are alone though they quiver with the same music.  
+        </p>
+
+        <p>
+            Give your <span id="span4">______</span>, but not into each other’s keeping.  
+            For only the hand of Life can contain your hearts.  
+            And stand together yet not too near together:  
+            For the pillars of the temple stand apart,  
+            And the oak tree and the cypress grow not in each other’s shadow.  
+        </p>
+		
+		<p>
+		    Author: <span id="span5">______</span>
+		</p>
+
+            <button onclick="fillWord1()">Reveal Word 1</button>
+            <button onclick="fillWord2()">Reveal Word 2</button>
+            <button onclick="fillWord3()">Reveal Word 3</button>
+            <button onclick="fillWord4()">Reveal Word 4</button>
+			<button onclick="fillWord5()">Reveal Author</button>
+			
+<!--Return To Index Right Justified -->
+        <p style="text-align: right;">
+            <a href="../index.html">Back to Landing Page</a>
+</body>
+</html>
