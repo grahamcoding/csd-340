@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+Daniel Graham
+Module 10.3 – JavaScript - Part 2
+09/27/2025
+-->
+
+<title>CSD 340 Web Development with HTML and CSS</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 20px;
+		background-color: teal;
+    }
+
+    h1 {
+        color: white;
+    }
+
+    .thumbnail {
+        width: 90x;
+        height: 90px;
+        margin: 10px;
+        cursor: pointer;
+        border: 4px solid #ccc;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    .thumbnail:hover {
+        border-color: #5A9BD5;
+        transform: scale(1.05);
+    }
+
+    .mainImage {
+        border: 8px solid #2c3e50;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    p {
+        margin-top: 20px;
+    }
+</style>
+
+<script>
+    // Function to change the large image when a thumbnail is clicked
+    function displayImage(imageFile) {
+        var largerImage = document.getElementById("mainImage");
+        var newNode = document.createElement("img");
+        newNode.id = "mainImage";
+        newNode.src = imageFile;
+        newNode.alt = "Large Displayed Image";
+        newNode.className = "mainImage";
+        largerImage.parentNode.replaceChild(newNode, largerImage);
+    }
+</script>
+</head>
+
+<body>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+    <p>Click on one of the images below to show a larger version!</p>
+
+    <!-- Thumbnails -->
+    <img class="thumbnail" src="images/photo1.jpg" alt="Photo 1"
+         onclick="displayImage('images/photo1.jpg')" />
+
+    <img class="thumbnail" src="images/photo2.jpg" alt="Photo 2"
+         onclick="displayImage('images/photo2.jpg')" />
+
+    <img class="thumbnail" src="images/photo3.jpg" alt="Photo 3"
+         onclick="displayImage('images/photo3.jpg')" />
+
+    <!-- Main Image -->
+    <div>
+        <img id="mainImage" class="mainImage" src="images/photo1.jpg" alt="Large Displayed Image" />
+    </div>
+
+    <!-- Return to Landing Page -->
+    <p style="text-align: right;">
+        <a href="../index.html">Back to Landing Page</a>
+    </p>
+</body>
+</html>
