@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--
+Daniel Graham
+Module 11.2 – JavaScript - Part 3
+10/05/2025
+-->
+
+<title>CSD 340 Web Development with HTML and CSS</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 20px;
+        background-color: teal;
+        color: white;
+    }
+
+    h1 {
+        color: white;
+    }
+
+    input[type="text"] {
+        padding: 8px;
+        border-radius: 5px;
+        border: none;
+        width: 250px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 8px 15px;
+        margin: 5px;
+        border-radius: 5px;
+        border: none;
+        background-color: #2c3e50;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: #5A9BD5;
+    }
+
+    #displayArea {
+        margin-top: 20px;
+        text-align: left;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: white;
+        color: black;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    p {
+        margin-top: 20px;
+    }
+</style>
+
+<script>
+    // Create an empty array to store typed entries
+    let items = [];
+
+    // Function to add an item to the new array
+    function addItem() {
+        let newItem = document.getElementById("itemInput").value.trim();
+
+        if (newItem === "") {
+            alert("Please enter something before adding!");
+            return;
+        }
+
+        items.push(newItem);
+        alert("Added: '" + newItem + "' at position " + items.length);
+        document.getElementById("itemInput").value = "";
+    }
+
+    // Function to delete the last item in the array
+    function deleteLastItem() {
+        if (items.length === 0) {
+            alert("The list is already empty!");
+            return;
+        }
+
+        let removedItem = items.pop();
+        alert("Deleted last entry: '" + removedItem + "'");
+    }
+
+    // Function to display the array contents
+    function displayItems() {
+        let displayArea = document.getElementById("displayArea");
+        displayArea.innerHTML = "";
+
+        if (items.length === 0) {
+            displayArea.innerHTML = "<p>No items to display.</p>";
+            return;
+        }
+
+        let listHTML = "<ol>";
+        for (let i = 0; i < items.length; i++) {
+            listHTML += "<li>" + items[i] + "</li>";
+        }
+        listHTML += "</ol>";
+
+        displayArea.innerHTML = listHTML;
+    }
+</script>
+</head>
+
+<body>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+    <p>Enter an item below, then use the buttons to Add, Delete, or Display the list.</p>
+
+    <input type="text" id="itemInput" placeholder="Type something here..." /><br>
+
+    <button onclick="addItem()">Add</button>
+    <button onclick="deleteLastItem()">Delete Last Entry</button>
+    <button onclick="displayItems()">Display</button>
+
+    <div id="displayArea">
+        <p>Your list will appear here.</p>
+    </div>
+
+    <!-- Return to Landing Page -->
+    <p style="text-align: right;">
+        <a href="../index.html" style="color: white;">Back to Landing Page</a>
+    </p>
+</body>
+</html>
