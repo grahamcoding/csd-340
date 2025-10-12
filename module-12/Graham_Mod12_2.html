@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Daniel Graham
+        Assignment 12.2 – JavaScript - Part 4
+        Date: 10/12/2025
+    -->
+    <meta charset="UTF-8">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" type="text/css" href="Graham_Mod12_2.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+
+        <div id="book-section" class="list-box solid-box">
+            <h3>Top 10 Favorite Books</h3>
+
+            <!-- Buttons to control display -->
+            <button onclick="displayTopToBottom()">Top to Bottom</button>
+            <button onclick="displayBottomToTop()">Bottom to Top</button>
+
+            <!-- This is where the book list will appear -->
+            <div id="bookList"></div>
+        </div>
+
+        <div id="bottom-div">
+            <a href="../index.html">Back to Landing Page</a>
+        </div>
+    </div>
+
+    <script>
+        // Create an array of your favorite books (same as module 3)
+        const books = [
+            "The Martian",
+            "Project Hail Mary",
+            "The Lord of the Rings",
+            "The Two Towers",
+            "The Return of the King",
+            "The Golden Compass",
+            "The Subtle Knife",
+            "The Amber Spyglass",
+            "Mass Effect: Ascension",
+            "Snow Crash"
+        ];
+
+        // Function to display books from top to bottom
+        function displayTopToBottom() {
+            let listHTML = "<ol>";
+            for (let i = 0; i < books.length; i++) {
+                listHTML += "<li>" + books[i] + "</li>";
+            }
+            listHTML += "</ol>";
+            document.getElementById("bookList").innerHTML = listHTML;
+        }
+
+        // Function to display books from bottom to top
+        function displayBottomToTop() {
+            let listHTML = "<ol>";
+            for (let i = books.length - 1; i >= 0; i--) {
+                listHTML += "<li>" + books[i] + "</li>";
+            }
+            listHTML += "</ol>";
+            document.getElementById("bookList").innerHTML = listHTML;
+        }
+    </script>
+</body>
+</html>
